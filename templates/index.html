@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="static/js/application.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</head>
+<style type="text/css">
+table {
+  margin-left: 5%;
+}
+tbody {
+    display:block;
+    height:200px;
+    overflow:auto;
+    width: 70%;
+    background-color: white;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+     background-color: white;
+}
+thead {
+    width: calc( 70% - 1em )
+}
+body{
+  background-color: black;
+}
+
+p{
+  color: grey;
+}
+h4{
+  color: grey;
+}
+
+}
+ 
+</style>
+
+<body>
+  <div class="card-body bg-info text-white">
+    <h3>Emisiones : <a >TON-0.279</a> </h3>
+  </div>
+  <br>
+<div class="container" id="content">
+    <div class="row">
+        <h4>Osorno</h4>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="font-weight-bold">Pantente: <a  id="patenteAuto"></a></p>
+           <img class="img-thumbnail" src="static/img/auto.jpg"> 
+           <p>HC: <a id="log"></a></p>
+            <p>CO: <a id="log2"></a></p>
+            <p>CO2: <a id="log3"></a></p>
+        </div>
+         <div class="col">
+            <p class="font-weight-bold">Pantente: <a  id="patenteCamioneta"></a></p>
+            <img class="img-thumbnail" src="static/img/camioneta.jpg"> 
+            <p>HC: <a id="camioneta1"></a></p>
+            <p>CO: <a id="camioneta2"></a></p>
+            <p>CO2: <a id="camioneta3"></a></p>
+        </div>
+        <div class="col">
+            <p class="font-weight-bold">Pantente: <a  id="patenteCamion"></a></p>
+            <img class="img-thumbnail" src="static/img/camion.jpg"> 
+            <p>HC: <a id="camion1"></a></p>
+            <p>CO: <a id="camion2"></a></p>
+            <p>CO2: <a id="camion3"></a></p>
+        </div>
+        <div class="col">
+            <p class="font-weight-bold">Pantente: <a  id="patenteBus"></a></a></p>
+            <img class="img-thumbnail" src="static/img/bus.jpg"> 
+            <p>HC: <a id="bus1"></a></p>
+            <p>CO: <a id="bus2"></a></p>
+            <p>CO2: <a id="bus3"></a></p>  
+        </div>
+    </div>
+    <br>
+    
+</div>
+<div class="container">
+  <div class="row">
+      <h4>Log de %</h4>
+  </div> 
+  <div class="row">
+    <table class="table table-striped" id="tabla">
+  <thead>
+    <tr>
+      <th scope="col">Patente</th>
+      <th scope="col">HC</th>
+      <th scope="col">CO</th>
+      <th scope="col">CO2</th>
+    </tr>
+  </thead>
+  <tbody>  
+  </tbody>
+  </div>
+
+</table>
+  </div>
+</div>
+
+</body>
+</html>
